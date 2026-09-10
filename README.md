@@ -5,7 +5,7 @@ This project transforms monthly UK crime data taken from data.police.uk into a P
 
 using a repeatable Python ETL script.
 
-<img src="https://github.com/itaybenal/UK-Crime-ETL-Pipeline/blob/c50b3204e5737f39133f4c565e17fc65813a866a/Project%20Diagram.png" width="780">
+<img src="Project Diagram.png" width="780">
 
 ## Tech Stack
 * PostgreSQL
