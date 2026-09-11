@@ -4,6 +4,7 @@ Monthly ETL script - loads a new month's crime data CSV into the star schema.
 Database_setup.sql needs to run once in the 'crime_data' database before this script.
 
 Before running:
+  - Install packages: pandas, sqlalchemy, psycopg2-binary
   - Replace 'your_file_path', 'yourpassword', and 'yourport' below with your own values.
   - Run this script from the repository root.
 
