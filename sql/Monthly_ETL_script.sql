@@ -93,11 +93,3 @@ LEFT JOIN dim_crime_type c
     ON r."Crime type" = c.crime_type_name
 LEFT JOIN dim_outcome o
     ON r."Last outcome category" = o.outcome_category;
-
--- Indexed the fact table for enhanced query performance.
--- One index per foreign key so PostgreSQL can use any combination of filters.
-CREATE INDEX idx_fact_crimes_date_id ON fact_crimes(date_id);
-CREATE INDEX idx_fact_crimes_force_id ON fact_crimes(force_id);
-CREATE INDEX idx_fact_crimes_location_id ON fact_crimes(location_id);
-CREATE INDEX idx_fact_crimes_crime_type_id ON fact_crimes(crime_type_id);
-CREATE INDEX idx_fact_crimes_outcome_id ON fact_crimes(outcome_id);
