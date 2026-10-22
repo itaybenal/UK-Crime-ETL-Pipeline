@@ -42,3 +42,11 @@ CREATE TABLE fact_crimes (
     crime_type_id INT REFERENCES dim_crime_type(crime_type_id),
     outcome_id INT REFERENCES dim_outcome(outcome_id)
 );
+
+-- Indexed the fact table for improved query performance.
+-- One index per foreign key so PostgreSQL can use any combination of filters.
+CREATE INDEX idx_fact_crimes_date_id ON fact_crimes(date_id);
+CREATE INDEX idx_fact_crimes_force_id ON fact_crimes(force_id);
+CREATE INDEX idx_fact_crimes_location_id ON fact_crimes(location_id);
+CREATE INDEX idx_fact_crimes_crime_type_id ON fact_crimes(crime_type_id);
+CREATE INDEX idx_fact_crimes_outcome_id ON fact_crimes(outcome_id);
